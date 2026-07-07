@@ -1,0 +1,2 @@
+﻿experiment_id,model,split,train_mape_pct,validation_mape_pct,train_size,validation_size,notes
+ridge_ohe_log1p_alpha_0_1_holdout_rs42,Ridge + OHE + log1p(target),train_valid_80_20_stratified_qcut10_rs42,2.626,14.194,6672,1668,car_id и Предложение исключены; alpha=0.1

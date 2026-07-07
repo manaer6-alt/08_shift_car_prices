@@ -1,0 +1,38 @@
+Дата: 2026-07-01
+Этап: первичный аудит данных
+Решение: исключён признак «Предложение».
+Причина: заполнен у 100% train и отсутствует у 100% test; корреляция с ценой 0.9938; MAPE при прямом использовании 8.31%.
+Риск: validation с этим признаком дала бы завышенную оценку качества и не отражала бы условия финального теста.
+
+Дата: 2026-07-01
+Этап: линейный baseline и подбор регуляризации
+
+Модель:
+Ridge + OneHotEncoder + log1p(target)
+
+Preprocessing:
+- числовые признаки: median imputation, missing indicators, StandardScaler;
+- категориальные признаки: заполнение __MISSING__, OneHotEncoder(handle_unknown="ignore");
+- исключены car_id и Предложение;
+- исходные строковые числовые колонки заменены извлечёнными числовыми признаками.
+
+Валидация:
+5-fold StratifiedKFold по 10 квантильным бинам target, shuffle=True, random_state=42.
+
+Результаты:
+alpha=0.1: CV MAPE 14.469% ± 0.243
+alpha=1.0: CV MAPE 14.503% ± 0.363
+alpha=3.0: CV MAPE 15.125% ± 0.453
+alpha=10.0: CV MAPE 16.283% ± 0.520
+
+Вывод:
+Для линейного baseline выбран alpha=0.1.
+
+
+Ансамбль:
+0.42 × Ridge(alpha=0.1, OHE, log1p target)
++ 0.58 × CatBoost(iterations=3000, log1p target).
+
+OOF MAPE: 12.747%.
+Holdout MAPE: 12.493%.
+Вес выбран по OOF; на holdout не тюнился.
