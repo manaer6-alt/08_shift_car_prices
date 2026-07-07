@@ -1,0 +1,6 @@
+component,holdout_mape_pct,role
+CatBoost V10,12.134718113739751,V8 + fold-safe target statistics
+CatBoost V8,12.330446271157372,Основная нелинейная модель
+Ridge log-target,13.817286837378557,Линейный tabular baseline
+Retrieval K=3,16.19956899033732,Ближайшие аналоги
+Text Ridge TF-IDF,18.331345694799396,Сигнал из названия и текста

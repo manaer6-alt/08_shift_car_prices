@@ -1,0 +1,22 @@
+{
+    "experiment_name": "final_ensemble_12_66",
+    "leaderboard_score": 12.66,
+    "train_rows": 8340,
+    "test_rows": 8341,
+    "v8_feature_count": 73,
+    "v5_feature_count": 75,
+    "stats_feature_count": 73,
+    "v10_feature_count": 85,
+    "artifacts": {
+        "Ridge pipeline": "models\\final_ensemble_12_66\\ridge_log_target_final.joblib",
+        "Text Ridge pipeline": "models\\final_ensemble_12_66\\text_tfidf_ridge_final.joblib",
+        "CatBoost V5": "models\\final_ensemble_12_66\\catboost_v5_title_final.cbm",
+        "CatBoost V8": "models\\final_ensemble_12_66\\catboost_v8_final.cbm",
+        "CatBoost Stats": "models\\final_ensemble_12_66\\catboost_stats_final.cbm",
+        "CatBoost V10": "models\\final_ensemble_12_66\\catboost_v10_final.cbm",
+        "Retrieval reference": "models\\final_ensemble_12_66\\retrieval_reference.parquet",
+        "Target statistics reference": "models\\final_ensemble_12_66\\target_stats_reference.parquet",
+        "Model schemas": "models\\final_ensemble_12_66\\model_feature_schemas.json",
+        "Ensemble config": "models\\final_ensemble_12_66\\ensemble_config.json"
+    }
+}

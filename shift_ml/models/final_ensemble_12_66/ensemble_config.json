@@ -1,0 +1,28 @@
+{
+    "leaderboard_score": 12.66,
+    "submission_name": "submission_v10_conditional_disagree.zip",
+    "ensemble_weights": {
+        "v8": 0.348682,
+        "ridge": 0.196562,
+        "v10_stats_v8_pred": 0.16198,
+        "retrieval_k3_pred": 0.13208,
+        "stats": 0.101857,
+        "text": 0.038848,
+        "v5": 0.019991,
+        "v6": 0.0
+    },
+    "disagreement_cut_points": [
+        0.04946076,
+        0.08297837
+    ],
+    "disagreement_multipliers": {
+        "low": 0.994,
+        "medium": 0.98,
+        "high": 0.951
+    },
+    "nested_oof_mape_pct": {
+        "raw_exact_v10_ensemble": 11.71595,
+        "global_calibration": 11.572301,
+        "conditional_disagreement_calibration": 11.472216
+    }
+}
