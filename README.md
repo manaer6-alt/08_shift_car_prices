@@ -6,6 +6,8 @@ Competition project for predicting used-car prices from structured attributes an
 
 ## Results
 
+Final competition result: **2nd place**.
+
 | Evaluation | MAPE |
 |---|---:|
 | Final leaderboard submission | **12.66%** |
